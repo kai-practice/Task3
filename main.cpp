@@ -2,6 +2,13 @@
 #include "modules/modules.h"
 #include "format.h"
 
+void pause(std::string message)
+{
+	std::cout << message;
+	std::cin.ignore();
+	std::cin.get();
+}
+
 int main()
 {
     setupEnv();
@@ -28,7 +35,7 @@ int main()
     		return 0;
     	}
     }
+	pause( "\nНатисніть Enter для виходу...");
     std::cout << "програма виконана. повернення в меню.";
-	system("pause");
 	main();
 }

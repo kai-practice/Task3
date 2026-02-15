@@ -10,3 +10,4 @@ void setupEnv()
 {
     system("chcp 65001 > nul"); // UTF-8 windows
 }
+
