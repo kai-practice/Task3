@@ -85,7 +85,7 @@ static void module_init()
     else
         std::cout << "ґ) Неможливо порахувати повністю\n";
 
-    std::cout << "д)" << max_pow2 << '\n';ё
+    std::cout << "д)" << max_pow2 << '\n';
 }
 
 static Module module(

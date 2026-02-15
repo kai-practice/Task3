@@ -12,35 +12,36 @@ static void module_init()
 	std::cin >> n;
 
 	if (n < 3) {
-		std::cout << "Кількість: 0\n";
+		std::cout << "Потрібно мінімум 3\n";
 		return;
 	}
 
-	std::vector<long> a(n);
+	std::vector<long> arr(n);
 	std::cout << "Введіть цілі числа:\n";
 	for (int i = 0; i < n; i++) {
 		std::cout << "n["<<i<<"]:";
-		std::cin >> a[i];
+		std::cin >> arr[i];
 	}
 
-	int count_for = 0;
+	int count1 = 0;
 	for (int i = 1; i < n - 1; i++) {
-		if (a[i] > a[i - 1] && a[i] > a[i + 1]) {
-			count_for++;
+		if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+			count1++;
 		}
 	}
 
-	int count_while = 0;
+	int count2 = 0;
 	int j = 1;
 	while (j < n - 1) {
-		if (a[j] > a[j - 1] && a[j] > a[j + 1]) {
-			count_while++;
+		if (arr[j] > arr[j - 1] && arr[j] > arr[j + 1]) {
+			count2++;
 		}
 		j++;
 	}
+
 	std::cout << "\n--- Результати ---" << "\n";
-	std::cout << "\nРезультат (через for): " << count_for << "\n";
-	std::cout << "Результат (через while): " << count_while << "\n";
+	std::cout << "\nРезультат (через for): " << count1 << "\n";
+	std::cout << "Результат (через while): " << count2 << "\n";
 }
 
 static Module module(

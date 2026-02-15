@@ -25,9 +25,9 @@ static void module_init()
     std::vector<long> a(n);
     std::cout << "Введіть " << n << " цілих чисел:\n";
     for (int i = 0; i < n; i++) {
+        std::cout << "a[" << i << "]:";
         std::cin >> a[i];
     }
-
 
     int count_even_for = 0;   // а)
     int count_sq_for = 0;     // б)
