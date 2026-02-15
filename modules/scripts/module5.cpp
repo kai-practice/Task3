@@ -18,7 +18,7 @@ void byFor(const std::vector<double>& a, int n) {
 
     for (int i = 0; i < n; i++) {
         double val = a[i];
-        int real_index = i + 1; // Людський індекс (1, 2, 3...)
+        int real_index = i + 1;
 
         if (val < min_all) min_all = val;
 
@@ -43,7 +43,6 @@ void byFor(const std::vector<double>& a, int n) {
     std::cout << "а) min(a1...an): " << min_all << std::endl;
     std::cout << "б) max(|a1|...|an|): " << max_abs << std::endl;
 
-    // Перевірка, чи були взагалі парні місця (якщо n=1, їх немає)
     if (n >= 2) {
         std::cout << "в) max(a2, a4...): " << max_even_pos << std::endl;
         std::cout << "ґ) min(a2, a4...) + max(a1, a3...): " << (min_even_pos + max_odd_pos) << std::endl;
